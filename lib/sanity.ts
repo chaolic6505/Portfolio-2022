@@ -1,4 +1,3 @@
-
 import createImageUrlBuilder from '@sanity/image-url'
 import { createClient } from 'next-sanity';
 

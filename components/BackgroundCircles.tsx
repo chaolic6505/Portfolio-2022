@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useColorMode } from '@chakra-ui/color-mode';
 
 type Props = {};
 
 //bg-gradient-to-tl from-gray-700 via-gray-900 to-black
 
 export default function BackgroundCircles({}: Props) {
+    const { colorMode, toggleColorMode } = useColorMode();
+
     return (
         <motion.div
             initial={{

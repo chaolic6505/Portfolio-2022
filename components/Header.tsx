@@ -34,6 +34,7 @@ export default function Header({ socials }: Props) {
             >
                 {socials.map((social) => (
                     <motion.button
+                        key={social._id}
                         whileTap={{ scale: 0.9 }}
                         whileHover={{ scale: 1.1 }}
                     >

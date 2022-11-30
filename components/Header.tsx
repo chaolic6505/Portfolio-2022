@@ -55,7 +55,7 @@ export default function Header({ socials }: Props) {
                 transition={{ delay: 0.6, duration: 1.0 }}
                 className="flex flex-row items-center text-gray-300 cursor-pointer"
             >
-                <Link href="#contact">
+                <Link href="#contact" passHref>
                     <motion.button
                         whileTap={{ scale: 0.9 }}
                         whileHover={{ scale: 1.1 }}

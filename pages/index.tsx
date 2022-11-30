@@ -47,5 +47,6 @@ export const getStaticProps = async () => {
             socials,
             pageInfo,
         },
+        revalidate: 10,
     };
 };

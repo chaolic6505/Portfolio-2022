@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import getSocials from '../lib/https/getSocials';
 import getPageInfo from '../lib/https/getPageInfo';
 import { PageInfo, Social } from '../typings';
+import { sanityClient } from '.././lib/sanity';
 
 type Props = {
     socials: Social[];
@@ -32,11 +33,12 @@ export default function Home({ socials, pageInfo }: Props) {
     );
 }
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
-    const socials = await getSocials();
-    const pageInfo = await getPageInfo();
+
+    let socials = await sanityClient.fetch(getSocials);
+    let pageInfo = await sanityClient.fetch(getPageInfo);
 
     // By returning { props: { socials } }, the Home component
     // will receive `socials` as a prop at build time
@@ -45,5 +47,6 @@ export async function getStaticProps() {
             socials,
             pageInfo,
         },
+        revalidate: 10,
     };
-}
+};

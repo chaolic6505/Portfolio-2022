@@ -1,12 +1,21 @@
+import { useEffect, useState } from 'react';
 import Header from '../components/Header';
+import Hero from '../components/Hero';
 import getSocials from '../lib/https/getSocials';
-import { Social } from '../typings';
+import getPageInfo from '../lib/https/getPageInfo';
+import { PageInfo, Social } from '../typings';
 
 type Props = {
     socials: Social[];
+    pageInfo: PageInfo;
 };
 
-export default function Home({ socials }: Props) {
+export default function Home({ socials, pageInfo }: Props) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+
+    if (!mounted) return null;
     return (
         <div
             className="bg-lightBackground text-darkBlack h-screen snap-y snap-mandatory
@@ -14,6 +23,10 @@ export default function Home({ socials }: Props) {
         >
             {/* Header */}
             <Header socials={socials} />
+            {/* Hero */}
+            <section id="hero" className="snap-start">
+                <Hero pageInfo={pageInfo} />
+            </section>
         </div>
     );
 }
@@ -22,12 +35,14 @@ export async function getStaticProps() {
     // Call an external API endpoint to get posts.
     // You can use any data fetching library
     const socials = await getSocials();
+    const pageInfo = await getPageInfo();
 
     // By returning { props: { socials } }, the Home component
     // will receive `socials` as a prop at build time
     return {
         props: {
             socials,
+            pageInfo,
         },
     };
 }

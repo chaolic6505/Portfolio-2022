@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import Script  from 'next/script';
 import { useEffect, useState } from 'react';
+
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import About from '../components/About';
 import getSocials from '../lib/https/getSocials';
 import getPageInfo from '../lib/https/getPageInfo';
 import { PageInfo, Social } from '../typings';
@@ -24,7 +24,6 @@ export default function Home({ socials, pageInfo }: Props) {
             className="bg-lightBackground text-darkBlack h-screen snap-y snap-mandatory
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80"
         >
-
             {/* Header */}
             <Header socials={socials} />
 
@@ -32,19 +31,19 @@ export default function Home({ socials, pageInfo }: Props) {
             <section id="hero" className="snap-start">
                 <Hero pageInfo={pageInfo} />
             </section>
+
+            {/* About */}
+            <section id="about" className="snap-center">
+                <About pageInfo={pageInfo} />
+            </section>
         </div>
     );
 }
 
 export const getStaticProps = async () => {
-    // Call an external API endpoint to get posts.
-    // You can use any data fetching library
-
     let socials = await sanityClient.fetch(getSocials);
     let pageInfo = await sanityClient.fetch(getPageInfo);
 
-    // By returning { props: { socials } }, the Home component
-    // will receive `socials` as a prop at build time
     return {
         props: {
             socials,

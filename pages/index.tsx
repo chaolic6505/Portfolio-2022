@@ -33,7 +33,7 @@ export default function Home({
     return (
         <div
             className="bg-lightBackground text-darkBlack h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80"
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar-none"
         >
             {/* Header */}
             <Header socials={socials} />

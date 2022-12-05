@@ -33,7 +33,7 @@ export default function About({ pageInfo }: Props) {
             <div className="space-y-5 md:space-y-10 px-0 md:px-10">
                 <h4 className="text-xl md:text-4xl font-semibold">
                     Here is a{' '}
-                    <span className=" underline decoration-green-300">
+                    <span className=" underline decoration-blue-300">
                         little
                     </span>{' '}
                     background

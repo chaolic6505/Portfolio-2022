@@ -8,7 +8,7 @@ type Props = { experience: Experience };
 
 export default function ExperienceCard({ experience }: Props) {
     return (
-        <article className="flex drop-shadow-xl overflow-visible flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-[#FFFFFF] bg-gradient-to-tr from-white  to-darkGreen/20 p-5 md:p10 hover:opacity-100 opacity-100 cursor-pointer transition-opacity duration-200 ">
+        <article className="flex drop-shadow-xl overflow-visible flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-100 to-indigo-200 p-5 md:p10 hover:opacity-50 cursor-pointer transition-opacity duration-200 ">
             <motion.img
                 alt="companyImage"
                 viewport={{ once: true }}

@@ -13,11 +13,7 @@ export default function Skills({ skills }: Props) {
             transition={{ duration: 1.5 }}
             className="h-screen flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center "
         >
-            <h3 className="absolute top-20 md:top-36 uppercase tracking-[3px] text-gray-600 text-sm">
-                Hover over a skill for current proficiency
-            </h3>
-
-            <div className="grid grid-cols-4 gap-4 md:gap-5 mt-20">
+            <div className="grid grid-cols-4 gap-5 md:gap-5">
                 {skills?.slice(0, skills.length / 2).map((skill) => (
                     <Skill key={skill._id} skill={skill} />
                 ))}
@@ -28,6 +24,9 @@ export default function Skills({ skills }: Props) {
                         <Skill key={skill._id} skill={skill} directionLeft />
                     ))}
             </div>
+            <h3 className="absolute uppercase tracking-[3px] text-gray-600 text-md bottom-20">
+                Hover over a skill for current proficiency
+            </h3>
         </motion.div>
     );
 }

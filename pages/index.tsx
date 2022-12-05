@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 
-import Header from '../components/Header';
+import Skills from '../components/Skills';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Header from '../components/Header';
 import WorkExperience from '../components/WorkExperience';
 import getSkills from '../lib/https/getSkills';
 import getSocials from '../lib/https/getSocials';
 import getPageInfo from '../lib/https/getPageInfo';
 import getExperiences from '../lib/https/getExpoeriences';
-import { Experience, PageInfo, Social, Skill } from '../typings';
 import { sanityClient } from '.././lib/sanity';
-import Skills from '../components/Skills';
+import { Experience, PageInfo, Social, Skill } from '../typings';
 
 type Props = {
     skills: Skill[];

@@ -1,23 +1,12 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import { urlFor } from '../lib/sanity';
-// import { urlFor } from '../sanity';
 import { PageInfo } from '../typings';
 
 type Props = { pageInfo: PageInfo };
 
-const containerVariants = {
-    hidden: {
-        opacity: 0,
-    },
-    visible: {
-        opacity: 1,
-    },
-};
-
-
 export default function About({ pageInfo }: Props) {
-
     return (
         <motion.div
             initial={{ opacity: 0 }}

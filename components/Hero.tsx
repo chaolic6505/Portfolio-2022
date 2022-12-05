@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { urlFor } from '../lib/sanity';
+
 import { PageInfo } from '../typings';
 import BackgroundCircles from './BackgroundCircles';
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Skill as mySkill } from '../typings';
+
 import { urlFor } from '../lib/sanity';
+import { Skill as mySkill } from '../typings';
 
 type Props = {
     skill: mySkill;

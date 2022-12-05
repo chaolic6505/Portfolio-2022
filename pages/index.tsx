@@ -3,17 +3,28 @@ import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import WorkExperience from '../components/WorkExperience';
+import getSkills from '../lib/https/getSkills';
 import getSocials from '../lib/https/getSocials';
 import getPageInfo from '../lib/https/getPageInfo';
-import { PageInfo, Social } from '../typings';
+import getExperiences from '../lib/https/getExpoeriences';
+import { Experience, PageInfo, Social, Skill } from '../typings';
 import { sanityClient } from '.././lib/sanity';
+import Skills from '../components/Skills';
 
 type Props = {
+    skills: Skill[];
     socials: Social[];
     pageInfo: PageInfo;
+    experiences: Experience[];
 };
 
-export default function Home({ socials, pageInfo }: Props) {
+export default function Home({
+    skills,
+    socials,
+    pageInfo,
+    experiences,
+}: Props) {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
@@ -36,18 +47,32 @@ export default function Home({ socials, pageInfo }: Props) {
             <section id="about" className="snap-center">
                 <About pageInfo={pageInfo} />
             </section>
+
+            {/* Experiences */}
+            <section id="experience" className="snap-center">
+                <WorkExperience experiences={experiences} />
+            </section>
+
+            {/* Skills */}
+            <section id="skills" className="snap-start">
+                <Skills skills={skills} />
+            </section>
         </div>
     );
 }
 
 export const getStaticProps = async () => {
+    let skills = await sanityClient.fetch(getSkills);
     let socials = await sanityClient.fetch(getSocials);
     let pageInfo = await sanityClient.fetch(getPageInfo);
+    let experiences = await sanityClient.fetch(getExperiences);
 
     return {
         props: {
+            skills,
             socials,
             pageInfo,
+            experiences,
         },
         revalidate: 10,
     };

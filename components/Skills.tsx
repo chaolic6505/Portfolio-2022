@@ -24,9 +24,9 @@ export default function Skills({ skills }: Props) {
                         <Skill key={skill._id} skill={skill} directionLeft />
                     ))}
             </div>
-            <h3 className="absolute uppercase tracking-[3px] text-gray-600 text-md bottom-20">
+            <h6 className="absolute uppercase tracking-[3px] text-gray-600 text-md bottom-5">
                 Hover over a skill for current proficiency
-            </h3>
+            </h6>
         </motion.div>
     );
 }

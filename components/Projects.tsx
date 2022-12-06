@@ -8,7 +8,6 @@ import { urlFor } from '../lib/sanity';
 type Props = { projects: Project[] };
 
 export default function Projects({ projects }: Props) {
-    console.log(projects, 'projects');
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -17,8 +16,8 @@ export default function Projects({ projects }: Props) {
             className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
         >
             <div className=" cursor-pointer relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80">
-                {projects?.map((project, i) => (
-                    <Link href={project.linkToBuild}>
+                {projects?.map((project) => (
+                    <Link key={project._id} href={project.linkToBuild}>
                         <div
                             key={project._id}
                             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"

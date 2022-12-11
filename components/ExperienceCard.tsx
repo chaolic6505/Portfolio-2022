@@ -8,7 +8,7 @@ type Props = { experience: Experience };
 
 export default function ExperienceCard({ experience }: Props) {
     return (
-        <article className="flex drop-shadow-xl overflow-visible flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-100 to-indigo-200 p-5 md:p10 hover:opacity-50 cursor-pointer transition-opacity duration-200 ">
+        <article className="flex drop-shadow-xl overflow-visible flex-col rounded-3xl items-center space-y-0 flex-shrink-0 w-72 md:w-[600px] xl:w-[700px] snap-center bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-100 to-indigo-200 p-5 md:p10 hover:opacity-50 cursor-pointer transition-opacity duration-200">
             <motion.img
                 alt="companyImage"
                 viewport={{ once: true }}
@@ -35,17 +35,12 @@ export default function ExperienceCard({ experience }: Props) {
                         />
                     ))}
                 </div>
-                <p className="uppercase py-2 md:py-5 text-gray-500 text-sm md:text-lg">
+                <p className="uppercase text-gray-500 text-sm md:text-lg">
                     {new Date(experience?.dateStarted).toDateString()} -{' '}
                     {experience.isCurrentlyWorkingHere
                         ? 'Present'
                         : new Date(experience?.dateEnded).toDateString()}
                 </p>
-                <ul className="list-disc text-black max-h-48 space-y-2 text-justify ml-0 text-sm md:text-lg pl-5  overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-slate-400/80">
-                    {experience?.points.map((point, i) => (
-                        <li key={i}>{point}</li>
-                    ))}
-                </ul>
             </div>
         </article>
     );

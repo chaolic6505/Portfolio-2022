@@ -7,6 +7,9 @@ import ExperienceCard from './ExperienceCard';
 type Props = { experiences: Experience[] };
 
 export default function WorkExperience({ experiences }: Props) {
+    //New to Old
+    let _experiences = [...experiences].reverse();
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -16,7 +19,7 @@ export default function WorkExperience({ experiences }: Props) {
         >
             {/* Experience cards */}
             <div className="w-screen md:w-full text-left pb-5 md:pb-10 flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-slate-400/80">
-                {experiences?.map((experience) => (
+                {_experiences?.map((experience) => (
                     <ExperienceCard
                         key={experience._id}
                         experience={experience}

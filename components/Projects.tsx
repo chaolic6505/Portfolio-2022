@@ -13,7 +13,7 @@ export default function Projects({ projects }: Props) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+            className=" h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center"
         >
             <div className=" cursor-pointer relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-slate-400/80">
                 {projects?.map((project) => (
@@ -29,7 +29,7 @@ export default function Projects({ projects }: Props) {
                                 transition={{ duration: 1.2 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 src={urlFor(project?.image).url()}
-                                className="rounded-lg  mb-2 object-cover object-center"
+                                className="h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
                             />
 
                             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">

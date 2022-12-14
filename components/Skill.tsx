@@ -11,7 +11,7 @@ type Props = {
 
 export default function Skill({ skill, directionLeft }: Props) {
     return (
-        <div className="group relative flex cursor-pointer">
+        <div className="group relative flex cursor-pointer flex-col items-center">
             <motion.img
                 alt="skill-image"
                 transition={{ duration: 1 }}
@@ -20,13 +20,10 @@ export default function Skill({ skill, directionLeft }: Props) {
                 initial={{ x: directionLeft ? -80 : 80, opacity: 0 }}
                 className="rounded-full border-2 border-darkGreen object-cover w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 xl:w-20 xl:h-20 2xl:w-25 2xl:h-25 filter group-hover:grayscale transition duration-300 ease-in-out"
             />
-            <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-gray-200 w-16 h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 xl:w-20 xl:h-20 2xl:w-20 2xl:h-20 rounded-full z-0">
-                <div className="flex items-center justify-center h-full">
-                    <p className="text-xl md:text-3xl font-bold text-slate-600 opacity-100">
-                        {skill.progress}%
-                    </p>
-                </div>
-            </div>
+
+            <p className="text-sm font-bold text-slate-600 opacity-100">
+                {skill.progress}%
+            </p>
         </div>
     );
 }

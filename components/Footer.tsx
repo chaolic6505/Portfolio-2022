@@ -54,7 +54,7 @@ export default function Footer() {
 
             <div className="flex  items-center justify-around ml-2">
                 {links.map((link) => (
-                    <Link href={link.url} passHref>
+                    <Link key={link.id}  href={link.url} passHref>
                         <motion.button
                             key={link.id}
                             whileTap={{ scale: 0.9 }}

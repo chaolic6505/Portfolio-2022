@@ -13,6 +13,7 @@ import getPageInfo from '../lib/https/getPageInfo';
 import getExperiences from '../lib/https/getExpoeriences';
 import { sanityClient } from '.././lib/sanity';
 import { Experience, PageInfo, Social, Skill, Project } from '../typings';
+import Footer from '../components/Footer';
 
 type Props = {
     skills: Skill[];
@@ -66,6 +67,8 @@ export default function Home({
             <section id="projects" className="snap-start">
                 <Projects projects={projects} />
             </section>
+
+             <Footer />
         </div>
     );
 }

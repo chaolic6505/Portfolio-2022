@@ -1,17 +1,37 @@
-import { SiFirebase, SiFastlane, SiGmail } from 'react-icons/si';
+import {
+    SiFirebase,
+    SiFastlane,
+    SiGmail,
+    SiFlask,
+    SiRedux,
+    SiSpringboot,
+    SiMysql,
+    SiMongodb,
+    SiDocker,
+    SiGraphql,
+} from 'react-icons/si';
 import {
     FaJs,
     FaPhp,
     FaJava,
     FaSwift,
-    FaGitAlt,
     FaReact,
     FaGithub,
     FaPython,
+    FaLaravel,
+    FaNodeJs,
     FaLinkedin,
+    FaAws,
 } from 'react-icons/fa';
 import { DiVisualstudio } from 'react-icons/di';
-import { SiTypescript, SiKotlin } from 'react-icons/si';
+import {
+    SiKotlin,
+    SiDotnet,
+    SiXcode,
+    SiNextdotjs,
+    SiTypescript,
+} from 'react-icons/si';
+import { FiFigma } from 'react-icons/fi';
 
 const navLinks = [
     { name: 'Home', route: '/' },
@@ -81,32 +101,74 @@ const languages = [
     },
 ];
 
-const techs = [
+const frameworks = [
     {
-        name: 'React',
-        icon: <FaReact fontSize="20px" />,
-        url: 'https://reactnative.dev/',
+        name: 'Node Js',
+        icon: <FaNodeJs fontSize="20px" />,
+    },
+    {
+        name: 'Redux',
+        icon: <SiRedux fontSize="20px" />,
     },
     {
         name: 'React Native',
         icon: <FaReact fontSize="20px" />,
-        url: 'https://reactnative.dev/',
     },
+    {
+        name: 'Next js',
+        icon: <SiNextdotjs fontSize="20px" />,
+        url: 'https://fastlane.tools/',
+    },
+    {
+        name: 'Laravel',
+        icon: <FaLaravel fontSize="20px" />,
+    },
+    {
+        name: 'Flask',
+        icon: <SiFlask fontSize="20px" />,
+    },
+    {
+        name: 'Springboot',
+        icon: <SiSpringboot fontSize="20px" />,
+    },
+    {
+        name: '.Net',
+        icon: <SiDotnet fontSize="20px" />,
+    },
+];
 
+const tools = [
+    {
+        name: 'AWS',
+        icon: <FaAws fontSize="20px" />,
+    },
+    {
+        name: 'MySQL',
+        icon: <SiMysql fontSize="20px" />,
+    },
+    {
+        name: 'MongoDB',
+        icon: <SiMongodb fontSize="20px" />,
+    },
+    {
+        name: 'Docker',
+        icon: <SiDocker fontSize="20px" />,
+    },
     {
         name: 'Firebase',
         icon: <SiFirebase fontSize="20px" />,
-        url: 'https://firebase.google.com/',
     },
     {
-        name: 'Github',
-        icon: <FaGitAlt fontSize="20px" />,
-        url: 'https://www.gitlab.com/',
+        name: 'GraphQL',
+        icon: <SiGraphql fontSize="20px" />,
     },
     {
-        name: 'CI/CD - Fastlane',
-        icon: <SiFastlane fontSize="20px" />,
-        url: 'https://fastlane.tools/',
+        name: 'Xcode',
+        icon: <SiXcode fontSize="20px" />,
+    },
+    {
+        name: 'Figma',
+        icon: <FiFigma fontSize="20px" />,
     },
 ];
 
@@ -119,4 +181,4 @@ const colors = {
     darkPrimary: 'pink.700',
 };
 
-export { colors, navLinks, languages, siteConfig };
+export { tools, colors, navLinks, languages, siteConfig, frameworks };

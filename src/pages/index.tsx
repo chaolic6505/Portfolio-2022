@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { Container, Divider } from '@chakra-ui/react';
 
-import { languages } from '../constant';
+import { tools, frameworks, languages } from '../constant';
 import styles from '../../styles/Home.module.css';
 import ProfileSection from '../section/ProfileSection';
 import TechSkillsection from '../section/TechSkillsection';
@@ -31,11 +31,17 @@ export default function Home() {
                 >
                     <ProfileSection />
                     <Divider my={5} />
+                    <TechSkillsection skills={languages} title={'Languages '} />
+                    <Divider my={5} />
                     <TechSkillsection
-                        title={'Languages'}
-                        skills={languages}
+                        skills={frameworks}
+                        title={'Libraries and Frameworks'}
                     />
                     <Divider my={5} />
+                    <TechSkillsection
+                        skills={tools}
+                        title={'Utils and Tools'}
+                    />
                 </Container>
             </main>
         </div>

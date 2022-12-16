@@ -6,7 +6,6 @@ import { languages } from '../constant';
 import styles from '../../styles/Home.module.css';
 import ProfileSection from '../section/ProfileSection';
 import TechSkillsection from '../section/TechSkillsection';
-import { Language } from '../types/language';
 
 export default function Home() {
     const [mounted, setMounted] = useState(false);
@@ -34,13 +33,8 @@ export default function Home() {
                     <Divider my={5} />
                     <TechSkillsection
                         title={'Languages'}
-                        languages={languages}
+                        skills={languages}
                     />
-                    {/* <Divider my={5} />
-                    <TechSkillsection
-                        title={'Languages'}
-                        languages={languages}
-                    /> */}
                     <Divider my={5} />
                 </Container>
             </main>

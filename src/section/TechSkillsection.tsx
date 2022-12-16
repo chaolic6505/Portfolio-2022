@@ -1,15 +1,16 @@
 import React from 'react';
 import { Grid, Heading, SlideFade, useColorModeValue } from '@chakra-ui/react';
 
-import { colors } from '../constant';
-import { Language } from '../types/language';
+// import { colors, languages } from '../constant';
+import { skill } from '../types/social';
 import StackCard from '../components/StackCard';
+import { colors } from '../constant';
 
 interface Props {
     title: string;
-    languages: Language[];
+    skills: skill[];
 }
-const TechSkillsection = ({ title, languages }: Props) => {
+const TechSkillsection = ({ title, skills }: Props) => {
     return (
         <SlideFade in offsetY={80} delay={0.2}>
             <Heading
@@ -30,8 +31,8 @@ const TechSkillsection = ({ title, languages }: Props) => {
                     'repeat(4, 1fr)',
                 ]}
             >
-                {languages.map((language) => (
-                    <StackCard skill={language} key={language?.name} />
+                {skills.map((skill) => (
+                    <StackCard skill={skill} key={skill?.name} />
                 ))}
             </Grid>
         </SlideFade>

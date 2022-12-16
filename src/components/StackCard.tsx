@@ -10,10 +10,8 @@ import {
 import { colors } from '../constant';
 import { skill } from '../types/social';
 import { MotionBox } from '../utils/motion';
-import { Language } from '../types/language';
-
 interface Props {
-    skill: skill | Language;
+    skill: skill ;
 }
 
 const StackCard: React.FC<Props> = ({ skill }) => {

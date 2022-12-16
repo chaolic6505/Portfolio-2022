@@ -1,23 +1,11 @@
-<h1 align="center">Chao-Li's Portfolio Website<project-name></h1>
 
-[Live URL](https://www.chaolic.ca/)
 
-## Get Started
+## Built with
+- [NextJS](https://nextjs.org/)
+- [Chakra UI](https://chakra-ui.com)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
-Install required dependencies:
+- Run `yarn` and `yarn dev` and you're ready to go!
+- To setup Spotify API key, refer to [this article](https://dev.to/theodorusclarence/how-to-show-now-playing-in-spotify-with-next-js-15h5)
 
-```sh
-npm install
-```
-
-Start the app:
-
-```sh
-npm run dev
-```
-## Built With
-
--   [Next.js](https://nextjs.org/docs/getting-started)
--   [Tailwind](https://tailwindcss.com/)
--   [Typescript](https://nextjs.org/docs/basic-features/typescript)
--   [Framer Motion](https://www.framer.com/motion/)

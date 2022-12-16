@@ -8,7 +8,7 @@ import {
     useColorModeValue,
     Flex,
 } from '@chakra-ui/react';
-import { siteConfig } from '../constant';
+import { colors, siteConfig } from '../constant';
 
 const iconProps = {
     variant: 'ghost',
@@ -30,16 +30,19 @@ const Footer = () => {
             mx="auto"
         >
             <Flex
-                flexDirection={['column', 'column', 'row']}
-                flexFlow={['column-reverse', 'column-reverse']}
-                justifyContent={['center', 'space-between']}
-                alignItems="center"
                 w="100%"
+                alignItems="center"
+                flexDirection={['column', 'column', 'row']}
+                justifyContent={['center', 'space-between']}
+                flexFlow={['column-reverse', 'column-reverse']}
             >
                 <Text
                     textAlign="center"
                     fontSize="sm"
-                    color={useColorModeValue('gray.500', 'gray.200')}
+                    color={useColorModeValue(
+                        colors.lightGray,
+                        colors.lightPink
+                    )}
                 >
                     © {new Date().getFullYear()} Chao-Li Chen - All Rights
                     Reserved{' '}
@@ -48,14 +51,15 @@ const Footer = () => {
                 <Box textAlign="center">
                     {siteConfig.author.accounts.map((sc, index) => (
                         <IconButton
-                            key={index}
-                            as={Link}
                             isExternal
-                            aria-label={sc.name}
-                            href={sc.url}
-                            colorScheme={sc.type}
-                            icon={sc.icon}
                             {...iconProps}
+                            as={Link}
+                            key={index}
+                            href={sc.url}
+                            size="lg"
+                            icon={sc.icon}
+                            aria-label={sc.name}
+                            colorScheme={sc.type}
                         />
                     ))}
                 </Box>

@@ -1,6 +1,17 @@
 import { SiFirebase, SiFastlane, SiGmail } from 'react-icons/si';
-import { FaJs, FaGitAlt, FaReact, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
+import {
+    FaJs,
+    FaPhp,
+    FaJava,
+    FaSwift,
+    FaGitAlt,
+    FaReact,
+    FaGithub,
+    FaPython,
+    FaLinkedin,
+} from 'react-icons/fa';
+import { DiVisualstudio } from 'react-icons/di';
+import { SiTypescript, SiKotlin } from 'react-icons/si';
 
 const navLinks = [
     { name: 'Home', route: '/' },
@@ -14,22 +25,22 @@ const siteConfig = {
         name: 'Chao-Li Chen',
         accounts: [
             {
-                url: 'https://github.com/chaolic6505',
-                icon: <FaGithub />,
-                name: 'Github',
                 type: 'gray',
+                name: 'Github',
+                icon: <FaGithub />,
+                url: 'https://github.com/chaolic6505',
             },
             {
-                url: 'https://www.linkedin.com/in/chaolic1120/',
-                icon: <FaLinkedin />,
-                name: 'Linkedin',
                 type: 'linkedin',
+                name: 'Linkedin',
+                icon: <FaLinkedin />,
+                url: 'https://www.linkedin.com/in/chaolic1120/',
             },
             {
-                url: 'mailto:chaolic6505@gmail.com',
-                icon: <SiGmail />,
-                name: 'Gmail',
                 type: 'red',
+                name: 'Gmail',
+                icon: <SiGmail />,
+                url: 'mailto:chaolic6505@gmail.com',
             },
         ],
     },
@@ -39,13 +50,38 @@ const languages = [
     {
         name: 'Javascript',
         icon: <FaJs fontSize="20px" />,
-        url: 'https://www.javascript.com/',
     },
     {
         name: 'Typescript',
         icon: <SiTypescript fontSize="20px" />,
-        url: 'https://www.javascript.com/',
     },
+    {
+        name: 'Python',
+        icon: <FaPython fontSize="20px" />,
+    },
+    {
+        name: 'PHP',
+        icon: <FaPhp fontSize="20px" />,
+    },
+    {
+        name: 'Java',
+        icon: <FaJava fontSize="20px" />,
+    },
+    {
+        name: 'Kotlin',
+        icon: <SiKotlin fontSize="20px" />,
+    },
+    {
+        name: 'C#',
+        icon: <DiVisualstudio fontSize="20px" />,
+    },
+    {
+        name: 'Swift',
+        icon: <FaSwift fontSize="20px" />,
+    },
+];
+
+const techs = [
     {
         name: 'React',
         icon: <FaReact fontSize="20px" />,
@@ -63,7 +99,7 @@ const languages = [
         url: 'https://firebase.google.com/',
     },
     {
-        name: 'Github & GitLab',
+        name: 'Github',
         icon: <FaGitAlt fontSize="20px" />,
         url: 'https://www.gitlab.com/',
     },
@@ -75,7 +111,9 @@ const languages = [
 ];
 
 const colors = {
+    lighterPink: 'pink.300',
     lightPink: 'pink.500',
+    lightBlue: 'blue.300',
     lightSecond: 'gray.500',
     lightGray: 'gray.700',
     darkPrimary: 'pink.700',

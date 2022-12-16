@@ -4,16 +4,16 @@ import {
     Flex,
     LinkBox,
     IconButton,
-    LinkOverlay,
     useColorModeValue,
 } from '@chakra-ui/react';
 
 import { colors } from '../constant';
 import { skill } from '../types/social';
 import { MotionBox } from '../utils/motion';
+import { Language } from '../types/language';
 
 interface Props {
-    skill: skill;
+    skill: skill | Language;
 }
 
 const StackCard: React.FC<Props> = ({ skill }) => {
@@ -40,15 +40,11 @@ const StackCard: React.FC<Props> = ({ skill }) => {
                         mr={3}
                         icon={skill?.icon}
                         aria-label={skill?.name}
-                        _groupHover={{ color: colors.lightGray }}
                     />
-                    <LinkOverlay href={skill?.url} rel="noopener" isExternal>
-                        <Flex>
-                            <Text size="sm" _hover={{ color: 'blue.500' }}>
-                                {skill?.name}
-                            </Text>
-                        </Flex>
-                    </LinkOverlay>
+
+                    <Flex>
+                        <Text size="md">{skill?.name}</Text>
+                    </Flex>
                 </Flex>
             </LinkBox>
         </MotionBox>

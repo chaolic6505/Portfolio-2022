@@ -7,5 +7,5 @@ export type Social = {
 export type skill = {
     name: string;
     icon: any;
-    url: string;
+    url?: string;
 };

@@ -172,6 +172,50 @@ const tools = [
     },
 ];
 
+const companies = [
+    {
+        title: 'Sitemax Ststems',
+        alt: 'sitemax image',
+        url: 'https://www.sitemaxsystems.com/',
+        role: 'Software Developer',
+        jobs: [
+            'Mobile Development',
+            'Full Stack Development',
+            'Flex From Development',
+        ],
+        skills: [
+            'IOS',
+            'AWS',
+            'PHP',
+            'React',
+            'Android',
+            'Firebase',
+            'Gatsby.js',
+            'Angular.js',
+            'React Native',
+        ],
+        period: 'June 2021 - Present',
+        logo: '/sitemax.png',
+    },
+    {
+        title: 'Recruitables',
+        alt: 'recruitables image',
+        url: 'https://www.linkedin.com/company/recruitableapp/about/',
+        role: 'Full Stack Developer',
+        jobs: ['Front End Development', 'User Authentication Systemt'],
+        skills: [
+            'AWS',
+            'React',
+            'Next.js',
+            'Node.js',
+            'Firebase',
+            'Postgresql',
+        ],
+        period: 'June 2021 - Present',
+        logo: '/recruitable.png',
+    },
+];
+
 const colors = {
     lighterPink: 'pink.300',
     lightPink: 'pink.500',
@@ -179,6 +223,16 @@ const colors = {
     lightSecond: 'gray.500',
     lightGray: 'gray.700',
     darkPrimary: 'pink.700',
+    darkText: 'white.900',
+    lightText: 'white.600',
 };
 
-export { tools, colors, navLinks, languages, siteConfig, frameworks };
+export {
+    tools,
+    colors,
+    companies,
+    navLinks,
+    languages,
+    siteConfig,
+    frameworks,
+};

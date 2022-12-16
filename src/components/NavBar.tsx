@@ -38,10 +38,7 @@ const NavBar = () => {
                             textDecoration: 'none',
                             bg: useColorModeValue('gray.300', 'blue.800'),
                         }}
-                        color={useColorModeValue(
-                            colors.lightPink,
-                            'pink.300'
-                        )}
+                        color={useColorModeValue(colors.lightGray, 'pink.300')}
                     >
                         {link.name}
                     </Link>

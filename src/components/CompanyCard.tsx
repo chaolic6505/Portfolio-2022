@@ -10,7 +10,7 @@ import {
     LinkOverlay,
     useColorModeValue,
 } from '@chakra-ui/react';
-import { Company } from '../types/company';
+import { Company } from '../../typings';
 import { colors } from '../constant';
 
 interface ICompanyCard {

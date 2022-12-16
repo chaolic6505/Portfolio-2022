@@ -34,11 +34,11 @@ const NavBar = () => {
                         fontWeight="700"
                         href={link.route}
                         onClick={isOpen ? onClose : onOpen}
+                        color={useColorModeValue(colors.lightGray, 'pink.300')}
                         _hover={{
                             textDecoration: 'none',
                             bg: useColorModeValue('gray.300', 'blue.800'),
                         }}
-                        color={useColorModeValue(colors.lightGray, 'pink.300')}
                     >
                         {link.name}
                     </Link>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { color, Text, TextProps, useColorModeValue } from '@chakra-ui/react';
+import { Text, TextProps, useColorModeValue } from '@chakra-ui/react';
+
 import { colors } from '../constant';
 
 interface IParagraph {

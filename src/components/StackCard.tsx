@@ -7,8 +7,8 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 
+import { skill } from '../../typings';
 import { colors } from '../constant';
-import { skill } from '../types/social';
 import { MotionBox } from '../utils/motion';
 interface Props {
     skill: skill ;

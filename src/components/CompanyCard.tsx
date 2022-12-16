@@ -19,6 +19,10 @@ interface ICompanyCard {
 }
 
 const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
+    let bgColor = useColorModeValue('white', 'gray.800');
+    let borderColor = useColorModeValue('gray.100', 'gray.700');
+    let tagColor = useColorModeValue(colors.lightGray, colors.lightBlue);
+    // console.log(colorMode, 'colorMode');
     return (
         <LinkBox
             px={4}
@@ -26,11 +30,11 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
             rounded="xl"
             position="relative"
             borderWidth="1px"
+            bg={bgColor}
+            borderColor={borderColor}
             _hover={{
                 borderColor: colors.lightPink,
             }}
-            bg={useColorModeValue('white', 'gray.800')}
-            borderColor={useColorModeValue('gray.100', 'gray.700')}
         >
             <LinkOverlay href={company.url} rel="noopener" isExternal>
                 <Flex justifyContent="space-between">
@@ -65,13 +69,10 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                             >
                                 {company.jobs.map((skill) => (
                                     <Tag
-                                        size="sm"
-                                        padding="0 5px"
                                         key={skill}
-                                        color={useColorModeValue(
-                                            colors.lightGray,
-                                            colors.lightBlue
-                                        )}
+                                        size="sm"
+                                        color={tagColor}
+                                        padding="0 5px"
                                     >
                                         {skill}
                                     </Tag>

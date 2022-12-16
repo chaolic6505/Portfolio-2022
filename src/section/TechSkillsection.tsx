@@ -1,10 +1,9 @@
 import React from 'react';
 import { Grid, Heading, SlideFade, useColorModeValue } from '@chakra-ui/react';
 
-// import { colors, languages } from '../constant';
-import { skill } from '../types/social';
-import StackCard from '../components/StackCard';
+import { skill } from '../../typings';
 import { colors } from '../constant';
+import StackCard from '../components/StackCard';
 
 interface Props {
     title: string;

@@ -52,19 +52,6 @@ function About() {
                                     About Me
                                 </Heading>
                             </Flex>
-
-                            <Paragraph
-                                textProps={{
-                                    my: 5,
-                                    fontSize: 'lg',
-                                    lineHeight: 1.6,
-                                }}
-                            >
-                                I am a Vancouver based Full-Stack Developer
-                                focusing on creating clean and responsive web
-                                and mobile applications.
-                            </Paragraph>
-
                             <Paragraph
                                 textProps={{
                                     my: 5,

@@ -31,9 +31,7 @@ const ProfileSection = () => {
                     Full Stack Developer based in Canada .{'\n'}
                 </Paragraph>
                 <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
-                    I am a Canada 🇨🇦 based Full-Stack Developer focused on
-                    creating clean, responsive websites and mobile applications
-                    with{' '}
+                    I focused on creating clean, responsive websites and mobile applications with{' '}
                     <Link
                         fontWeight="500"
                         _hover={{ textDecoration: 'none' }}

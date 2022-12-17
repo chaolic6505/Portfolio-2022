@@ -28,10 +28,30 @@ const ProfileSection = () => {
                     </Heading>
                 </Flex>
                 <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
-                    Full Stack Developer based in Canada .{'\n'}
+                    Full Stack Developer
                 </Paragraph>
                 <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
-                    I focused on creating clean, responsive websites and mobile applications with{' '}
+                    I Love{' '}
+                    <Link
+                        fontWeight="500"
+                        _hover={{ textDecoration: 'none' }}
+                        color={useColorModeValue('pink.500', 'pink.400')}
+                    >
+                        Food.tsx{' '}
+                    </Link>
+                    and{' '}
+                    <Link
+                        fontWeight="500"
+                        _hover={{ textDecoration: 'none' }}
+                        color={useColorModeValue('pink.500', 'pink.400')}
+                    >
+                        OutdoorActivity.java{' '}
+                    </Link>
+                    {'\n'}
+                </Paragraph>
+                <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
+                    I focused on creating clean, responsive websites and mobile
+                    applications with{' '}
                     <Link
                         fontWeight="500"
                         _hover={{ textDecoration: 'none' }}
@@ -56,17 +76,11 @@ const ProfileSection = () => {
                             style={{ textDecoration: 'none' }}
                         >
                             <Button
-                                size="sm"
+                                size="md"
                                 margin={'5px'}
-                                colorScheme="blue"
-                                leftIcon={
-                                    <BiPhoneCall
-                                        color={useColorModeValue(
-                                            'pink.500',
-                                            'pink.400'
-                                        )}
-                                    />
-                                }
+                                variant="ghost"
+                                colorScheme="pink"
+                                leftIcon={<BiPhoneCall color={'pink.500'} />}
                             >
                                 Contact Me
                             </Button>

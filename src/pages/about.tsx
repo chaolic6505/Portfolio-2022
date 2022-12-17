@@ -59,7 +59,7 @@ function About() {
                                     lineHeight: 1.6,
                                 }}
                             >
-                                In my current position at Sitemax, I am the lead
+                                In my role, I am the lead
                                 mobile developer; I am responsible for
                                 monitoring performance, updating library
                                 dependencies, and creating all the new features

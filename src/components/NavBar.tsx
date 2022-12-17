@@ -10,18 +10,14 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 import { useDisclosure } from '@chakra-ui/hooks';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import { colors, navLinks } from '../constant';
+import { colors, navLinks, accounts } from '../constant';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-
+navLinks;
 const NavBar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-
-    let router = useRouter();
-    let { asPath } = router;
 
     const navItem = (
         <>

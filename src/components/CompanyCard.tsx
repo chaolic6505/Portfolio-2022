@@ -110,7 +110,12 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                     display={['flex', 'flex', 'none', 'none']}
                 >
                     {company.skills.map((skill) => (
-                        <Tag size="sm" padding="0 5px" key={skill}>
+                        <Tag
+                            size="sm"
+                            padding="0 5px"
+                            key={skill}
+                            color={tagColor}
+                        >
                             {skill}
                         </Tag>
                     ))}

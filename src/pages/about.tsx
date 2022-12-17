@@ -45,7 +45,7 @@ function About() {
                                 </Stack>
                                 <Heading
                                     color={useColorModeValue(
-                                        colors.lightGray,
+                                        colors.darkGray,
                                         colors.lightPink
                                     )}
                                 >
@@ -77,7 +77,7 @@ function About() {
 
                                     <Heading
                                         color={useColorModeValue(
-                                            colors.lightGray,
+                                            colors.darkGray,
                                             colors.lightPink
                                         )}
                                     >
@@ -114,7 +114,7 @@ function About() {
                                     </Stack>
                                     <Heading
                                         color={useColorModeValue(
-                                            colors.lightGray,
+                                            colors.darkGray,
                                             colors.lightPink
                                         )}
                                     >

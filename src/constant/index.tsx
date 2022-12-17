@@ -252,14 +252,15 @@ const educations = [
 ];
 
 const colors = {
+    lightBlue: 'blue.300',
     lighterPink: 'pink.300',
     lightPink: 'pink.500',
-    lightBlue: 'blue.300',
-    lightSecond: 'gray.500',
-    lightGray: 'gray.700',
+    gray: 'gray.500',
+    green: 'green.500',
+    lightText: 'white.600',
+    darkGray: 'gray.700',
     darkPrimary: 'pink.700',
     darkText: 'white.900',
-    lightText: 'white.600',
 };
 
 export {

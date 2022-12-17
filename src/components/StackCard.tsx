@@ -18,14 +18,13 @@ const StackCard: React.FC<Props> = ({ skill }) => {
     return (
         <MotionBox whileHover={{ y: -5 }}>
             <LinkBox
-                p={4}
-                w="100%"
+                p={3}
+                w="80%"
                 as="article"
                 role="group"
                 display="flex"
                 transition=".5s"
-                cursor="pointer"
-                borderRadius={5}
+                borderRadius={10}
                 borderWidth="1px"
                 borderColor={useColorModeValue('gray.300', 'gray.700')}
                 _hover={{

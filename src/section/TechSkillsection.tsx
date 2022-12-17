@@ -15,7 +15,7 @@ const TechSkillsection = ({ title, skills }: Props) => {
             <Heading
                 as="h1"
                 mb={3}
-                color={useColorModeValue(colors.lightGray, colors.lightPink)}
+                color={useColorModeValue(colors.darkGray, colors.lightPink)}
                 fontSize={{ base: '24px', md: '30px', lg: '36px' }}
             >
                 {title}

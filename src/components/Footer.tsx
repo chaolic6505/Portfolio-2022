@@ -39,10 +39,7 @@ const Footer = () => {
                 <Text
                     textAlign="center"
                     fontSize="sm"
-                    color={useColorModeValue(
-                        colors.lightGray,
-                        colors.lightPink
-                    )}
+                    color={useColorModeValue(colors.darkGray, colors.lightPink)}
                 >
                     © {new Date().getFullYear()} Chao-Li Chen - All Rights
                     Reserved{' '}

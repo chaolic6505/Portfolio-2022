@@ -30,7 +30,7 @@ const NavBar = () => {
                         fontWeight="700"
                         href={link.route}
                         onClick={isOpen ? onClose : onOpen}
-                        color={useColorModeValue(colors.lightGray, 'pink.300')}
+                        color={useColorModeValue(colors.darkGray, 'pink.300')}
                         _hover={{
                             textDecoration: 'none',
                             bg: useColorModeValue('gray.300', 'pink.900'),

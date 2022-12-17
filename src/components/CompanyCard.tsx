@@ -24,7 +24,7 @@ interface ICompanyCard {
 const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
     let bgColor = useColorModeValue('white', 'gray.800');
     let borderColor = useColorModeValue('gray.100', 'gray.700');
-    let tagColor = useColorModeValue(colors.lightBlue, colors.lightBlue);
+    let tagColor = useColorModeValue(colors.lightBlue, colors.green);
     let tagBgColor = useColorModeValue(colors.lighterPink, colors.lightPink);
 
     return (

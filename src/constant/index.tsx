@@ -34,7 +34,7 @@ import { DiVisualstudio } from 'react-icons/di';
 
 const navLinks = [
     { name: 'Home', route: '/' },
-    { name: 'Experience', route: '/about' },
+    { name: 'Experience', route: '/experience' },
     {
         name: 'Github',
         route: 'https://github.com/chaolic6505?tab=repositories',

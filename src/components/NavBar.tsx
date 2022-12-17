@@ -13,10 +13,11 @@ import NextLink from 'next/link';
 import { useDisclosure } from '@chakra-ui/hooks';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import { colors, navLinks, accounts } from '../constant';
+import { colors, navLinks } from '../constant';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 navLinks;
 const NavBar = () => {
+    let menuColor = useColorModeValue(colors.darkGray, 'pink.300');
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     const navItem = (
@@ -60,6 +61,7 @@ const NavBar = () => {
                 >
                     <IconButton
                         size={'md'}
+                        color={menuColor}
                         aria-label={'Toggle Menu'}
                         display={['inherit', 'inherit', 'none']}
                         onClick={isOpen ? onClose : onOpen}

@@ -21,7 +21,7 @@ import styles from '../../styles/Home.module.css';
 import Paragraph from '../components/Paragraph';
 import CompanyCard from '../components/CompanyCard';
 
-function About() {
+function Experience() {
     const { colorMode } = useColorMode();
     return (
         <div className={styles.container}>
@@ -151,4 +151,4 @@ function About() {
     );
 }
 
-export default About;
+export default Experience;

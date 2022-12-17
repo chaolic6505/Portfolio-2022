@@ -208,7 +208,7 @@ const companies = [
         alt: 'recruitables image',
         url: 'https://www.linkedin.com/company/recruitableapp/about/',
         role: 'Full Stack Developer',
-        jobs: ['Front End Development', 'User Authentication Systemt'],
+        jobs: ['OAuth Integration', 'Front End Development'],
         skills: [
             'AWS',
             'Postgresql',

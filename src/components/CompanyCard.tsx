@@ -24,8 +24,9 @@ interface ICompanyCard {
 const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
     let bgColor = useColorModeValue('white', 'gray.800');
     let borderColor = useColorModeValue('gray.100', 'gray.700');
-    let tagColor = useColorModeValue(colors.lightGray, colors.lightBlue);
-    // console.log(colorMode, 'colorMode');
+    let tagColor = useColorModeValue(colors.lightBlue, colors.lightBlue);
+    let tagBgColor = useColorModeValue(colors.lighterPink, colors.lightPink);
+
     return (
         <LinkBox
             px={4}
@@ -58,7 +59,7 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                                 {company.title}
                             </Heading>
                             <Heading
-                                fontSize="sm"
+                                fontSize="lg"
                                 color={`mode.${colorMode}.career.subtext`}
                             >
                                 {company.role}
@@ -67,10 +68,10 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                                 {company.jobs.map((job) => (
                                     <WrapItem key={job}>
                                         <Tag
-                                            size="sm"
+                                            size="md"
                                             key={job}
                                             color={tagColor}
-                                            padding="0 5px"
+                                            padding="0 10px"
                                         >
                                             {job}
                                         </Tag>
@@ -81,14 +82,16 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                                 mt={5}
                                 spacing={1}
                                 alignItems="center"
-                                display={['none', 'none', 'flex', 'flex']}
+                                display={['wrap', 'wrap', 'wrap', 'wrap']}
+                                direction={['row', 'row', 'row', 'row']}
                             >
                                 {company.skills.map((skill) => (
                                     <WrapItem key={skill}>
                                         <Tag
-                                            size="sm"
-                                            padding="0 5px"
+                                            size="md"
                                             key={skill}
+                                            color={tagBgColor}
+                                            padding="0 10px"
                                         >
                                             {skill}
                                         </Tag>
@@ -103,23 +106,27 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                         </Text>
                     </Stack>
                 </Flex>
-                <Stack
+                {/* <Stack
                     mt={5}
                     spacing={1}
                     alignItems="center"
-                    display={['flex', 'flex', 'none', 'none']}
+                    display={['wrap', 'wrap', 'none', 'none']}
+                    direction={['row', 'row', 'column', 'column']}
+                    justifyContent="flex-start"
+                    alignContent={['flex-start', 'flex-start', 'center', 'center']}
+                    alignSelf={['flex-start', 'flex-start', 'center', 'center']}
                 >
                     {company.skills.map((skill) => (
                         <Tag
                             size="sm"
-                            padding="0 5px"
                             key={skill}
-                            color={tagColor}
+                            padding="0 px"
+                            color={tagBgColor}
                         >
                             {skill}
                         </Tag>
                     ))}
-                </Stack>
+                </Stack> */}
             </LinkOverlay>
         </LinkBox>
     );

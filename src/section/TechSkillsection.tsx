@@ -22,7 +22,7 @@ const TechSkillsection = ({ title, skills }: Props) => {
             </Heading>
             <Grid
                 mt={5}
-                gap={[2, 5, 5, 5]}
+                gap={[2, 2, 2, 2]}
                 templateColumns={[
                     '1fr',
                     'repeat(2,1fr)',

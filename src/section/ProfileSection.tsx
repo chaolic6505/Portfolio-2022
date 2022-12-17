@@ -28,8 +28,29 @@ const ProfileSection = () => {
                     </Heading>
                 </Flex>
                 <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
-                    Full Stack Developer
+                    A Full Stack Developer,
                 </Paragraph>
+
+                <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
+                    who focuses on creating clean, responsive websites and mobile
+                    applications with{' '}
+                    <Link
+                        fontWeight="500"
+                        _hover={{ textDecoration: 'none' }}
+                        color={useColorModeValue('pink.500', 'pink.400')}
+                    >
+                        React{' '}
+                    </Link>
+                    and{' '}
+                    <Link
+                        fontWeight="500"
+                        _hover={{ textDecoration: 'none' }}
+                        color={useColorModeValue('pink.500', 'pink.400')}
+                    >
+                        React Native.{' '}
+                    </Link>
+                </Paragraph>
+
                 <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
                     I Love{' '}
                     <Link
@@ -48,25 +69,6 @@ const ProfileSection = () => {
                         OutdoorActivity.java{' '}
                     </Link>
                     {'\n'}
-                </Paragraph>
-                <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
-                    I focused on creating clean, responsive websites and mobile
-                    applications with{' '}
-                    <Link
-                        fontWeight="500"
-                        _hover={{ textDecoration: 'none' }}
-                        color={useColorModeValue('pink.500', 'pink.400')}
-                    >
-                        React{' '}
-                    </Link>
-                    and{' '}
-                    <Link
-                        fontWeight="500"
-                        _hover={{ textDecoration: 'none' }}
-                        color={useColorModeValue('pink.500', 'pink.400')}
-                    >
-                        React Native{' '}
-                    </Link>
                 </Paragraph>
 
                 <Box mt={5}>

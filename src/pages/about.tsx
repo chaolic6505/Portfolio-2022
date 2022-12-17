@@ -26,7 +26,7 @@ function About() {
     return (
         <div className={styles.container}>
             <Head>
-                <title>About Me</title>
+                <title>Experience</title>
                 <meta name="description" content="Full Stack Developer" />
                 <link rel="icon" href="/profile_picture.png" />
             </Head>
@@ -49,7 +49,7 @@ function About() {
                                         colors.lightPink
                                     )}
                                 >
-                                    About Me
+                                    Present
                                 </Heading>
                             </Flex>
                             <Paragraph
@@ -59,14 +59,14 @@ function About() {
                                     lineHeight: 1.6,
                                 }}
                             >
-                                In my role, I am the lead
-                                mobile developer; I am responsible for
-                                monitoring performance, updating library
-                                dependencies, and creating all the new features
-                                for the mobile app with React Native and Redux.
-                                My responsibilities also include creating custom
-                                PDF forms at the client’s request and updating
-                                content and style for the company’s website.
+                                In my role, I am the lead mobile developer; I am
+                                responsible for monitoring performance, updating
+                                library dependencies, and creating all the new
+                                features for the mobile app with React Native
+                                and Redux. My responsibilities also include
+                                creating custom PDF forms at the client’s
+                                request and updating content and style for the
+                                company’s website.
                             </Paragraph>
 
                             <Flex alignItems="center" my={10}>
@@ -81,7 +81,7 @@ function About() {
                                             colors.lightPink
                                         )}
                                     >
-                                        Career
+                                        Work Experience
                                     </Heading>
                                 </Flex>
                             </Flex>

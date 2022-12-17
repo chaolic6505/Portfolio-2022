@@ -106,27 +106,6 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                         </Text>
                     </Stack>
                 </Flex>
-                {/* <Stack
-                    mt={5}
-                    spacing={1}
-                    alignItems="center"
-                    display={['wrap', 'wrap', 'none', 'none']}
-                    direction={['row', 'row', 'column', 'column']}
-                    justifyContent="flex-start"
-                    alignContent={['flex-start', 'flex-start', 'center', 'center']}
-                    alignSelf={['flex-start', 'flex-start', 'center', 'center']}
-                >
-                    {company.skills.map((skill) => (
-                        <Tag
-                            size="sm"
-                            key={skill}
-                            padding="0 px"
-                            color={tagBgColor}
-                        >
-                            {skill}
-                        </Tag>
-                    ))}
-                </Stack> */}
             </LinkOverlay>
         </LinkBox>
     );

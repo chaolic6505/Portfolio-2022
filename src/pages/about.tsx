@@ -11,15 +11,15 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import Head from 'next/head';
+import { AiFillEye } from 'react-icons/ai';
+import { SiBookstack } from 'react-icons/si';
 import { MdWorkOutline } from 'react-icons/md';
-import { BsFillBriefcaseFill } from 'react-icons/bs';
-import { AiFillStar, AiFillEye } from 'react-icons/ai';
+
 import { MotionBox } from '../utils/motion';
-import { colors, companies } from '../constant';
+import { colors, companies, educations } from '../constant';
 import styles from '../../styles/Home.module.css';
 import Paragraph from '../components/Paragraph';
 import CompanyCard from '../components/CompanyCard';
-import { UnderlinedText } from '../components/UnderlinedText';
 
 function About() {
     const { colorMode } = useColorMode();
@@ -78,7 +78,7 @@ function About() {
                                     <Heading
                                         color={useColorModeValue(
                                             colors.lightGray,
-                                            colors.lightPink,
+                                            colors.lightPink
                                         )}
                                     >
                                         Career
@@ -101,6 +101,43 @@ function About() {
                                         <CompanyCard
                                             key={index}
                                             company={company}
+                                            colorMode={colorMode}
+                                        />
+                                    </MotionBox>
+                                ))}
+                            </VStack>
+
+                            <Flex alignItems="center" my={10}>
+                                <Flex alignItems="center">
+                                    <Stack pr={3}>
+                                        <SiBookstack size={'30px'} />
+                                    </Stack>
+                                    <Heading
+                                        color={useColorModeValue(
+                                            colors.lightGray,
+                                            colors.lightPink
+                                        )}
+                                    >
+                                        Education
+                                    </Heading>
+                                </Flex>
+                            </Flex>
+
+                            <VStack
+                                spacing={4}
+                                marginBottom={6}
+                                align="left"
+                                mx={[0, 0, 6]}
+                                mt={5}
+                            >
+                                {educations.map((education, index) => (
+                                    <MotionBox
+                                        whileHover={{ y: -5 }}
+                                        key={index}
+                                    >
+                                        <CompanyCard
+                                            key={index}
+                                            company={education}
                                             colorMode={colorMode}
                                         />
                                     </MotionBox>

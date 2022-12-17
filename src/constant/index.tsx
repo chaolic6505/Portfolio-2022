@@ -211,7 +211,7 @@ const companies = [
             'Firebase',
             'Postgresql',
         ],
-        period: 'June 2021 - Present',
+        period: 'January 2021 - April 2021',
         logo: '/recruitable.png',
     },
 ];

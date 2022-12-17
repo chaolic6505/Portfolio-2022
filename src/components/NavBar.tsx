@@ -37,7 +37,7 @@ const NavBar = () => {
                         color={useColorModeValue(colors.lightGray, 'pink.300')}
                         _hover={{
                             textDecoration: 'none',
-                            bg: useColorModeValue('gray.300', 'blue.800'),
+                            bg: useColorModeValue('gray.300', 'pink.900'),
                         }}
                     >
                         {link.name}

@@ -9,6 +9,9 @@ import {
     Heading,
     LinkOverlay,
     useColorModeValue,
+    Wrap,
+    WrapItem,
+    Container,
 } from '@chakra-ui/react';
 import { Company } from '../../typings';
 import { colors } from '../constant';
@@ -47,7 +50,7 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                             alt={company.alt}
                             src={company.logo}
                         />
-                        <Stack spacing={2} pl={3} align="left">
+                        <Container pl={3}>
                             <Heading
                                 fontSize="xl"
                                 color={`mode.${colorMode}.career.text`}
@@ -60,44 +63,42 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                             >
                                 {company.role}
                             </Heading>
-                            <Stack
-                                mt={5}
-                                isInline
-                                spacing={1}
-                                alignItems="center"
-                                display={['none', 'none', 'flex', 'flex']}
-                            >
-                                {company.jobs.map((skill) => (
-                                    <Tag
-                                        key={skill}
-                                        size="sm"
-                                        color={tagColor}
-                                        padding="0 5px"
-                                    >
-                                        {skill}
-                                    </Tag>
+                            <Wrap mt={5} spacing={1} alignItems="center">
+                                {company.jobs.map((job) => (
+                                    <WrapItem key={job}>
+                                        <Tag
+                                            size="sm"
+                                            key={job}
+                                            color={tagColor}
+                                            padding="0 5px"
+                                        >
+                                            {job}
+                                        </Tag>
+                                    </WrapItem>
                                 ))}
-                            </Stack>
-                            <Stack
+                            </Wrap>
+                            <Wrap
                                 mt={5}
-                                isInline
                                 spacing={1}
                                 alignItems="center"
                                 display={['none', 'none', 'flex', 'flex']}
                             >
                                 {company.skills.map((skill) => (
-                                    <Tag size="sm" padding="0 5px" key={skill}>
-                                        {skill}
-                                    </Tag>
+                                    <WrapItem key={skill}>
+                                        <Tag
+                                            size="sm"
+                                            padding="0 5px"
+                                            key={skill}
+                                        >
+                                            {skill}
+                                        </Tag>
+                                    </WrapItem>
                                 ))}
-                            </Stack>
-                        </Stack>
+                            </Wrap>
+                        </Container>
                     </Flex>
-                    <Stack display={['none', 'none', 'flex', 'flex']}>
-                        <Text
-                            fontSize={14}
-                            color={`mode.${colorMode}.career.subtext`}
-                        >
+                    <Stack>
+                        <Text fontSize={14} color={colors.lightPink}>
                             {company.period}
                         </Text>
                     </Stack>

@@ -231,11 +231,11 @@ const educations = [
         role: 'Full-Stack Web Development Diploma',
         url: 'https://www.bcit.ca/programs/full-stack-web-development-diploma-full-time-7540dipma/',
         jobs: [
-            'Design',
+            'Agile',
+            'UX / UI',
             'Entrepreneurship',
             'Front End Development',
             'Back End Development',
-            'Project & Team Management',
         ],
         skills: [],
     },

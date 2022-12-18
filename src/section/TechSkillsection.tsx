@@ -24,7 +24,7 @@ const TechSkillsection = ({ title, skills }: Props) => {
                 mt={5}
                 gap={[2, 2, 2, 2]}
                 templateColumns={[
-                    '1fr',
+                    'repeat(2,1fr)',
                     'repeat(2,1fr)',
                     'repeat(3, 1fr)',
                     'repeat(4, 1fr)',

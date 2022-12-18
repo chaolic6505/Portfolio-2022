@@ -5,6 +5,7 @@ import {
     Box,
     Flex,
     Stack,
+    Avatar,
     HStack,
     IconButton,
     useColorModeValue,
@@ -15,9 +16,9 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 import { colors, navLinks } from '../constant';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-navLinks;
+
 const NavBar = () => {
-    let menuColor = useColorModeValue(colors.darkGray, 'pink.300');
+    let menuColor = useColorModeValue(colors.lightText, colors.lightText);
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     const navItem = (
@@ -31,7 +32,10 @@ const NavBar = () => {
                         fontWeight="700"
                         href={link.route}
                         onClick={isOpen ? onClose : onOpen}
-                        color={useColorModeValue(colors.darkGray, 'pink.300')}
+                        color={useColorModeValue(
+                            colors.darkGray,
+                            colors.lighterPink
+                        )}
                         _hover={{
                             textDecoration: 'none',
                             bg: useColorModeValue('gray.300', 'pink.900'),
@@ -68,6 +72,13 @@ const NavBar = () => {
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
                     />
                     <HStack spacing={8} alignItems={'center'}>
+                        <Avatar
+                            href="/"
+                            size="md"
+                            as={Link}
+                            src="/avatar.png"
+                            _hover={{ borderColor: menuColor }}
+                        />
                         <HStack
                             as="nav"
                             spacing="4"

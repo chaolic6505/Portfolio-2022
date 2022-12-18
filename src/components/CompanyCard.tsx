@@ -70,7 +70,7 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
             py={5}
             rounded="xl"
             position="relative"
-            borderWidth="1px"
+            borderWidth="2px"
             bg={bgColor}
             borderColor={borderColor}
             _hover={{

@@ -34,7 +34,7 @@ import { DiVisualstudio } from 'react-icons/di';
 
 const navLinks = [
     { name: 'Home', route: '/' },
-    { name: 'Experience', route: '/about' },
+    { name: 'Experience', route: '/experience' },
     {
         name: 'Github',
         route: 'https://github.com/chaolic6505?tab=repositories',
@@ -231,11 +231,11 @@ const educations = [
         role: 'Full-Stack Web Development Diploma',
         url: 'https://www.bcit.ca/programs/full-stack-web-development-diploma-full-time-7540dipma/',
         jobs: [
-            'Design',
+            'Agile',
+            'UX / UI',
             'Entrepreneurship',
             'Front End Development',
             'Back End Development',
-            'Project & Team Management',
         ],
         skills: [],
     },

@@ -20,7 +20,44 @@ interface ICompanyCard {
     company: Company;
     colorMode: string;
 }
+const renderJobs = (company: Company, tagColor: string) => {
+    return (
+        <Wrap mt={5} spacing={1} alignItems="center">
+            {company.jobs.map((job) => (
+                <WrapItem key={job}>
+                    <Tag size="md" key={job} color={tagColor} padding="0 10px">
+                        {job}
+                    </Tag>
+                </WrapItem>
+            ))}
+        </Wrap>
+    );
+};
 
+const renderSkill = (company: Company, tagBgColor: string) => {
+    return (
+        <Wrap
+            mt={5}
+            spacing={1}
+            alignItems="center"
+            display={['wrap', 'wrap', 'wrap', 'wrap']}
+            direction={['row', 'row', 'row', 'row']}
+        >
+            {company.skills.map((skill) => (
+                <WrapItem key={skill}>
+                    <Tag
+                        size="md"
+                        key={skill}
+                        color={tagBgColor}
+                        padding="0 10px"
+                    >
+                        {skill}
+                    </Tag>
+                </WrapItem>
+            ))}
+        </Wrap>
+    );
+};
 const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
     let bgColor = useColorModeValue('white', 'gray.800');
     let borderColor = useColorModeValue('gray.100', 'gray.700');
@@ -64,40 +101,8 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                             >
                                 {company.role}
                             </Heading>
-                            <Wrap mt={5} spacing={1} alignItems="center">
-                                {company.jobs.map((job) => (
-                                    <WrapItem key={job}>
-                                        <Tag
-                                            size="md"
-                                            key={job}
-                                            color={tagColor}
-                                            padding="0 10px"
-                                        >
-                                            {job}
-                                        </Tag>
-                                    </WrapItem>
-                                ))}
-                            </Wrap>
-                            <Wrap
-                                mt={5}
-                                spacing={1}
-                                alignItems="center"
-                                display={['wrap', 'wrap', 'wrap', 'wrap']}
-                                direction={['row', 'row', 'row', 'row']}
-                            >
-                                {company.skills.map((skill) => (
-                                    <WrapItem key={skill}>
-                                        <Tag
-                                            size="md"
-                                            key={skill}
-                                            color={tagBgColor}
-                                            padding="0 10px"
-                                        >
-                                            {skill}
-                                        </Tag>
-                                    </WrapItem>
-                                ))}
-                            </Wrap>
+                            {renderSkill(company, tagBgColor)}
+                            {renderJobs(company, tagColor)}
                         </Container>
                     </Flex>
                     <Stack>

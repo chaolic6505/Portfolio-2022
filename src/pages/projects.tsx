@@ -3,7 +3,6 @@ import Head from 'next/head';
 import {
     Box,
     Flex,
-    Wrap,
     Stack,
     VStack,
     Heading,
@@ -48,7 +47,7 @@ function Projects() {
                                         colors.lightPink
                                     )}
                                 >
-                                    Projects I've Worked On
+                                    Projects
                                 </Heading>
                             </Flex>
 
@@ -59,20 +58,18 @@ function Projects() {
                                 mx={[0, 0, 6]}
                                 marginBottom={6}
                             >
-                                <Wrap mt={5} spacing={1} alignItems="center">
-                                    {projects.map((project, index) => (
-                                        <MotionBox
+                                {projects.map((project, index) => (
+                                    <MotionBox
+                                        key={index}
+                                        whileHover={{ y: -5 }}
+                                    >
+                                        <CompanyCard
                                             key={index}
-                                            whileHover={{ y: -5 }}
-                                        >
-                                            <CompanyCard
-                                                key={index}
-                                                company={project}
-                                                colorMode={colorMode}
-                                            />
-                                        </MotionBox>
-                                    ))}
-                                </Wrap>
+                                            company={project}
+                                            colorMode={colorMode}
+                                        />
+                                    </MotionBox>
+                                ))}
                             </VStack>
                         </Box>
                     </SlideFade>

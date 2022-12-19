@@ -3,9 +3,9 @@ export interface Company {
     title: string;
     alt: string;
     url: string;
-    role: string;
+    role?: string;
     skills: string[];
-    period: string;
+    period?: string;
     logo: string;
 }
 

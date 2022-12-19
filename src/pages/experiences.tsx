@@ -21,7 +21,7 @@ import styles from '../../styles/Home.module.css';
 import Paragraph from '../components/Paragraph';
 import CompanyCard from '../components/CompanyCard';
 
-function Experience() {
+function Experiences() {
     const { colorMode } = useColorMode();
     return (
         <div className={styles.container}>
@@ -41,7 +41,7 @@ function Experience() {
                         <Box>
                             <Flex alignItems={'center'}>
                                 <Stack pr={3}>
-                                    <AiFillEye size={'30px'} />
+                                    <AiFillEye size={'50px'} />
                                 </Stack>
                                 <Heading
                                     color={useColorModeValue(
@@ -72,7 +72,7 @@ function Experience() {
                             <Flex alignItems="center" my={10}>
                                 <Flex alignItems={'center'}>
                                     <Stack pr={3}>
-                                        <MdWorkOutline size={'30px'} />
+                                        <MdWorkOutline size={'40px'} />
                                     </Stack>
 
                                     <Heading
@@ -151,4 +151,4 @@ function Experience() {
     );
 }
 
-export default Experience;
+export default Experiences;

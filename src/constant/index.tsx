@@ -34,7 +34,8 @@ import { DiVisualstudio } from 'react-icons/di';
 
 const navLinks = [
     { name: 'Home', route: '/' },
-    { name: 'Experience', route: '/experience' },
+    { name: 'Experiences', route: '/experiences' },
+    { name: 'Projects', route: '/projects' },
     {
         name: 'Github',
         route: 'https://github.com/chaolic6505?tab=repositories',
@@ -251,6 +252,94 @@ const educations = [
     },
 ];
 
+const projects = [
+    {
+        title: 'Next  Blog  App',
+        alt: 'Next-Blog-App image',
+        logo: '/blog.jpeg',
+        url: 'https://github.com/chaolic6505/Next-blog-app',
+        jobs: [
+            'SSG',
+            'Content Management System with Sanity.io',
+            'Responsive styles with Tailwindcss',
+        ],
+        skills: [
+            'Sanity,io',
+            'React',
+            'Zod',
+            'Next.js',
+            'Typescript',
+            'Tailwind CSS',
+        ],
+    },
+    {
+        title: 'Next  Postgres  News  App ( Reddit Clone )',
+        alt: 'Next-Postgres-News-App image',
+        logo: '/reddit.png',
+        url: 'https://github.com/chaolic6505/Next-Postgres-News-App',
+        jobs: [
+            'OAuth with Reddit',
+            'Responsive styles with Tailwindcss',
+            'User voting system',
+            ' OOP concept with Typescript',
+        ],
+        skills: [
+            'Postgresql',
+            'React',
+            'GraphQL',
+            'Next.js',
+            'Typescript',
+            'Tailwind CSS',
+        ],
+    },
+    {
+        title: 'Next-Stripe-Firebase Subscriptions App ( Netflix Clone )',
+        alt: 'Next-Stripe-Firebase Subscriptions App image',
+        logo: '/netflix.jpeg',
+        url: 'https://github.com/chaolic6505/Next-Stripe-Firebase-Subscriptions-App',
+        jobs: [
+            'Users can explore a different genre',
+            ' Each user has a favorite list',
+            ' Stripe payment system integrated with Firebase plug-in',
+            ' Authentication and Database with Firebase',
+        ],
+        skills: [
+            'Stripe',
+            'React',
+            'Next.js',
+            'Firebase',
+            'Typescript',
+            'Tailwind CSS',
+        ],
+    },
+    {
+        title: 'Music Player App with AWS S3 storage',
+        alt: 'Music Player App image',
+        logo: '/cds.png',
+        url: 'https://github.com/chaolic6505/applemusicCDS',
+        jobs: [
+            'OOP design',
+            'Files upload to AWS S3',
+            ' Search songs by title, artist, album',
+            ' Support lyrics and album cover',
+        ],
+        skills: ['Python', 'Flask', 'AWS', 'Postgre SQL'],
+    },
+    {
+        title: 'Dating App',
+        alt: 'Dating App image',
+        logo: '/sm.png',
+        url: 'https://github.com/chaolic6505/Dating-App-Single-Mingle',
+        jobs: [
+            'OOP design',
+            'Files upload to AWS S3',
+            ' Search songs by title, artist, album',
+            ' Support lyrics and album cover',
+        ],
+        skills: ['Express', 'Node', 'AWS', 'MongoDB', 'EJS'],
+    },
+];
+
 const colors = {
     lightBlue: 'blue.300',
     lighterPink: 'pink.300',
@@ -266,6 +355,7 @@ const colors = {
 export {
     tools,
     colors,
+    projects,
     accounts,
     navLinks,
     siteConfig,

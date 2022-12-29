@@ -51,25 +51,7 @@ const ProfileSection = () => {
                     </Link>
                 </Paragraph>
 
-                <Paragraph textProps={{ fontSize: '2xl', lineHeight: 1.6 }}>
-                    I Love{' '}
-                    <Link
-                        fontWeight="500"
-                        _hover={{ textDecoration: 'none' }}
-                        color={useColorModeValue('pink.500', 'pink.400')}
-                    >
-                        Food.tsx{' '}
-                    </Link>
-                    and{' '}
-                    <Link
-                        fontWeight="500"
-                        _hover={{ textDecoration: 'none' }}
-                        color={useColorModeValue('pink.500', 'pink.400')}
-                    >
-                        OutdoorActivity.java{' '}
-                    </Link>
-                    {'\n'}
-                </Paragraph>
+                
 
                 <Box mt={5}>
                     <ButtonGroup>

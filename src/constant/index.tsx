@@ -259,7 +259,7 @@ const projects = [
         logo: '/blog.jpeg',
         url: 'https://github.com/chaolic6505/Next-blog-app',
         jobs: [
-            'SSG',
+            'Static Site Generate',
             'Content Management System with Sanity.io',
             'Responsive styles with Tailwindcss',
         ],
@@ -337,6 +337,14 @@ const projects = [
             ' Support lyrics and album cover',
         ],
         skills: ['Express', 'Node', 'AWS', 'MongoDB', 'EJS'],
+    },
+    {
+        title: 'Trivia API  Quiz  App',
+        alt: 'Trivia API quiz  app image',
+        logo: '/trivia.png',
+        url: 'https://github.com/chaolic6505/Quiz-App-Trivia-API',
+        jobs: ['Screen Navigation', 'Mobile Application', 'OOP Concept'],
+        skills: ['Swift', 'SwiftUI', 'Xcode', 'Fetch Rest API'],
     },
 ];
 

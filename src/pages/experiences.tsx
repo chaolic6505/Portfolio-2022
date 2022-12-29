@@ -59,14 +59,14 @@ function Experiences() {
                                     lineHeight: 1.6,
                                 }}
                             >
-                                In my role, I am the lead mobile developer; I am
-                                responsible for monitoring performance, updating
-                                library dependencies, and creating all the new
-                                features for the mobile app with React Native
-                                and Redux. My responsibilities also include
-                                creating custom PDF forms at the client’s
-                                request and updating content and style for the
-                                company’s website.
+                                In my current role as the lead mobile developer
+                                at Sitemax Systems, I am responsible for
+                                monitoring performance, updating library
+                                dependencies, and implementing new features for
+                                the mobile app using React Native and Redux. I
+                                have also created custom PDF forms for clients
+                                and updated content and style for the company's
+                                website.
                             </Paragraph>
 
                             <Flex alignItems="center" my={10}>
